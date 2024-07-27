@@ -1,5 +1,5 @@
 # Feature Engineering and Machine Learning Framework for DDoS Attack Detection in the Standardized Internet of Things
-
+NOTE : WORKS ONLY IN LINUX (UBUNTU)
 ## Project Overview
 This project implements a feature engineering and machine learning framework for detecting Distributed Denial of Service (DDoS) attacks in the Internet of Things (IoT) environment. The framework utilizes sFlow, Floodlight, and Mininet for real-time detection.
 
@@ -9,11 +9,7 @@ This project implements a feature engineering and machine learning framework for
 - [Installation](#installation)
 - [Usage](#usage)
 - [Dataset](#dataset)
-- [Model Training](#model-training)
 - [Real-Time Detection](#real-time-detection)
-- [Results](#results)
-- [Contributing](#contributing)
-- [License](#license)
 
 ## Features
 - Real-time DDoS detection using machine learning algorithms.
@@ -35,5 +31,24 @@ This project implements a feature engineering and machine learning framework for
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/username/IoT-DDoS-Detection.git
-   cd IoT-DDoS-Detection
+   git clone https://github.com/ns7523/DDoS-attack-in-IoT-Real-Time-.git
+   cd DDoS-attack-in-IoT-Real-Time-
+   ```
+2. **Set up Mininet:**
+   Follow the instructions on the [Mininet website](http://mininet.org/download/) to install Mininet.
+
+3. **Set up Floodlight:**
+   Follow the instructions in the Floodlight configuration file (Floodlight Installation Steps) to configure Flood Light.
+
+4. **Set up sFlow-RT:**
+   Follow the instructions on the [sFlow-RT website](https://sflow-rt.com/download.php) to install and configure sFlow-RT.
+
+## Usage
+   Follow the instructions in the Command.txt file (Commands.txt) .
+
+## Dataset
+The dataset used for training and testing the machine learning models consists of network traffic data generated in the Mininet environment. The traffic data includes normal traffic as well as DDoS attack traffic.
+
+## Real-Time Detection
+The `ns-ddos` file utilizes the trained machine learning model to detect DDoS attacks in real-time. It processes the incoming network traffic data and predicts whether it is normal or attack traffic.
+
