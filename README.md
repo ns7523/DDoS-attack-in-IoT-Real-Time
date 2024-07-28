@@ -1,7 +1,7 @@
 ## Feature Engineering and Machine Learning Framework for DDoS Attack Detection in the Standardized Internet of Things
 NOTE : WORKS ONLY IN LINUX (UBUNTU)
 ## Drive link
-Full Project avalable on [ns-ddos](https://drive.google.com/file/d/1_M12cc4rVFs_8B1AikrZbKmQRvEEExx-/view?usp=sharing)
+Full Project avalable on [ns-ddos](https://drive.google.com/file/d/1ZZW5ZXRkD0Hb7kgpU7pNp3NSgwJSViHw/view?usp=sharing)
 ## Project Overview
 This project implements a feature engineering and machine learning framework for detecting Distributed Denial of Service (DDoS) attacks in the Internet of Things (IoT) environment. The framework utilizes sFlow, Floodlight, and Mininet for real-time detection.
 
@@ -54,7 +54,7 @@ This project implements a feature engineering and machine learning framework for
 ## Installation
 
 1. **Download File :**
-   [ns-ddos](https://drive.google.com/file/d/1_M12cc4rVFs_8B1AikrZbKmQRvEEExx-/view?usp=sharing)
+   [ns-ddos](https://drive.google.com/file/d/1ZZW5ZXRkD0Hb7kgpU7pNp3NSgwJSViHw/view?usp=sharing)
 3. **Set up Mininet:**
    Follow the instructions on the [Mininet website](http://mininet.org/download/) to install Mininet.
 
