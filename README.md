@@ -71,7 +71,7 @@ This project implements a feature engineering and machine learning framework for
 The dataset used for training and testing the machine learning models consists of network traffic data generated in the Mininet environment. The traffic data includes normal traffic as well as DDoS attack traffic.
 
 ## Real-Time Detection
-The [`ns-ddos`]( file utilizes the trained machine learning model to detect DDoS attacks in real-time. It processes the incoming network traffic data and predicts whether it is normal or attack traffic.
+The [`ns-ddos`](Commands.txt) file utilizes the trained machine learning model to detect DDoS attacks in real-time. It processes the incoming network traffic data and predicts whether it is normal or attack traffic.
 
 ## Results :
 ### Project Snapshots
