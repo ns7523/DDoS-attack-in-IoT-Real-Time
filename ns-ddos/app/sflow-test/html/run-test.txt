@@ -1,0 +1,13 @@
+#!/bin/sh
+TGT=$1
+
+# 100Mbit/s start 
+PPS_SCALE="0000"
+BPS_SCALE=$PPS_SCALE"0000"
+# set size so BPS = 10 * PPS
+SIZE="1208"
+
+for TEST in 1 5 2 6 3 7 4 8 5 10
+do
+  iperf3 -u -c $TGT -i 0 -t 30 -l $SIZE -b $TEST$BPS_SCALE
+done

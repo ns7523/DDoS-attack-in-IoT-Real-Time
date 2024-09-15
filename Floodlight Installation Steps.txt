@@ -1,0 +1,20 @@
+1) sudo apt-get install build-essential ant maven python-dev
+
+2) sudo apt-get install build-essential openjdk-7-jdk ant maven python-dev eclipse
+
+3) git clone git://github.com/floodlight/floodlight.git
+
+4) cd floodlight
+
+5) git submodule init
+
+6) git submodule update
+ 
+7) ant ******* just extract that file that already sent you that contain target/floodlight.jar file. so you can execute java -jar target/floodlight.jar no need to setup Java Variable n no need to install ant***********
+
+8) sudo mkdir /var/lib/floodlight
+ 
+9) sudo chmod 777 /var/lib/floodlight
+
+
+

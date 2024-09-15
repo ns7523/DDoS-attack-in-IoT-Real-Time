@@ -1,0 +1,51 @@
+{
+ "ip_flood": {
+  "threshold": 1000000,
+  "timeout": 180,
+  "action": "ignore",
+  "include": "",
+  "exclude": ""
+ },
+ "ip_fragmentation": {
+  "threshold": 500000,
+  "timeout": 60,
+  "action": "ignore",
+  "include": "",
+  "exclude": ""
+ },
+ "icmp_flood": {
+  "threshold": 500000,
+  "timeout": 60,
+  "action": "ignore",
+  "include": "",
+  "exclude": ""
+ },
+ "udp_amplification": {
+  "threshold": "500000",
+  "timeout": "60",
+  "action": "filter",
+  "include": "",
+  "exclude": ""
+ },
+ "udp_flood": {
+  "threshold": 500000,
+  "timeout": 60,
+  "action": "ignore",
+  "include": "",
+  "exclude": ""
+ },
+ "tcp_amplification": {
+  "threshold": 500000,
+  "timeout": 60,
+  "action": "ignore",
+  "include": "",
+  "exclude": ""
+ },
+ "tcp_flood": {
+  "threshold": 500000,
+  "timeout": 60,
+  "action": "ignore",
+  "include": "",
+  "exclude": ""
+ }
+}

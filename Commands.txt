@@ -1,0 +1,31 @@
+1) cd floodlight
+   java -jar target/floodlight.jar
+
+2) sudo mn --controller=remote,ip=127.0.0.1,port=6653 --topo=single,3
+
+3) cd ns-ddos 
+   sudo ./start.sh
+
+4) sudo ovs-vsctl -- --id=@sflow create sflow agent=eth0  target=\"127.0.0.1:6343\" sampling=10 polling=20 -- -- set bridge s1 sflow=@sflow
+
+5) Open http://localhost:8080/ui/pages/index.html
+   Open http://localhost:8008/metric/127.0.0.1/html 
+
+6) xterm h1 h2 h3
+
+7) on h1 terminal "ping 10.0.0.2
+
+8) on h2 terminal "ping 10.0.0.1"
+
+8) see result on browser
+
+9) on h3 terminal "ping -f 10.0.0.1" 
+            OR 
+sudo hping3 --faster --rand-source 10.0.0.1 
+10)if hping3 is not installed, install it in another terminal
+
+11) see result on browser
+
+
+				
+
