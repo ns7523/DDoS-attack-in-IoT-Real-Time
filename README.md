@@ -1,6 +1,9 @@
 ## Feature Engineering and Machine Learning Framework for DDoS Attack Detection in the Standardized Internet of Things
 NOTE : WORKS ONLY IN LINUX (UBUNTU)
-Installation Guide : Installation Guide.pdf
+
+[`Installation Guide`](Installation%20Guide.pdf)
+
+
 ## Drive link
 Full Project avalable on [`ns-ddos`](https://drive.google.com/file/d/1ZZW5ZXRkD0Hb7kgpU7pNp3NSgwJSViHw/view?usp=sharing)
 
