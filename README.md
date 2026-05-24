@@ -9,7 +9,10 @@
 </p>
 
 <p>
-  <code>Mininet</code> · <code>Floodlight</code> · <code>sFlow-RT</code> · <code>Open vSwitch</code> · <code>Python</code> · <code>Machine Learning</code>
+  <img src="https://img.shields.io/badge/Python-0D1117?style=for-the-badge&logo=python&logoColor=white" alt="Python" />
+  <img src="https://img.shields.io/badge/Mininet-0D1117?style=for-the-badge&logo=linux&logoColor=white" alt="Mininet" />
+  <img src="https://img.shields.io/badge/Floodlight-0D1117?style=for-the-badge&logo=icloud&logoColor=white" alt="Floodlight" />
+  <img src="https://img.shields.io/badge/sFlow--RT-0D1117?style=for-the-badge&logo=datadog&logoColor=white" alt="sFlow-RT" />
 </p>
 
 </div>
@@ -31,7 +34,7 @@
 
 ---
 
-## 01 · Interface Preview
+## 01 · Overview
 
 <table>
 <tr>
@@ -70,44 +73,7 @@ The project is structured like a compact engineering product: topology, controll
 
 ---
 
-## 03 · System Cards
-
-<table>
-<tr>
-<td width="25%" valign="top">
-
-### Network
-
-Mininet creates a controlled topology for repeatable IoT-style traffic experiments.
-
-</td>
-<td width="25%" valign="top">
-
-### Control
-
-Floodlight manages the SDN environment and virtual switch behavior.
-
-</td>
-<td width="25%" valign="top">
-
-### Telemetry
-
-sFlow-RT converts flow activity into live operational metrics.
-
-</td>
-<td width="25%" valign="top">
-
-### Intelligence
-
-A machine learning layer classifies observed traffic behavior into clean state signals.
-
-</td>
-</tr>
-</table>
-
----
-
-## 04 · Detection Flow
+## 03 · Detection Flow
 
 ```mermaid
 sequenceDiagram
@@ -130,7 +96,7 @@ sequenceDiagram
 
 ---
 
-## 05 · Pipeline
+## 04 · Pipeline
 
 <table>
 <tr>
@@ -152,7 +118,7 @@ flowchart LR
 
 ---
 
-## 06 · Key Features
+## 05 · Key Features
 
 | Feature | Purpose |
 |---|---|
@@ -165,7 +131,7 @@ flowchart LR
 
 ---
 
-## 07 · Machine Learning Workflow
+## 06 · Machine Learning Workflow
 
 ```mermaid
 flowchart TD
@@ -188,7 +154,7 @@ flowchart TD
 
 ---
 
-## 08 · Tech Stack
+## 07 · Tech Stack
 
 <table>
 <tr>
@@ -234,7 +200,7 @@ NumPy
 
 ---
 
-## 09 · Installation
+## 08 · Installation
 
 > Recommended platform: Ubuntu or a Linux VM with Mininet support.
 
@@ -249,17 +215,11 @@ source .venv/bin/activate
 pip install pandas numpy scikit-learn
 ```
 
-| Dependency | Role |
-|---|---|
-| Mininet | Emulated topology runtime. |
-| Floodlight | SDN controller. |
-| sFlow-RT | Live telemetry engine. |
-
 Reference: [`Installation Guide.pdf`](Installation%20Guide.pdf)
 
 ---
 
-## 10 · Usage
+## 09 · Usage
 
 Command reference: [`Commands.txt`](Commands.txt)
 
@@ -284,18 +244,29 @@ sFlow-RT UI      http://localhost:8008/metric/127.0.0.1/html
 
 ---
 
-## 11 · Traffic Model
+## 10 · Project Structure
 
-| Signal | Description |
-|---|---|
-| Baseline traffic | Standard host-to-host behavior in the emulated topology. |
-| Anomalous traffic | Lab-only network behavior used for detection validation. |
-| sFlow metrics | Flow-level telemetry captured through sFlow-RT. |
-| Detection output | Normal or risk state from the ML detector. |
+```text
+.
+├── assets/
+│   ├── brand/
+│   │   ├── architecture.svg
+│   │   └── hero.svg
+│   └── screenshots/
+├── Commands.txt
+├── Installation Guide.pdf
+└── README.md
+```
+
+Suggested production structure:
+
+```text
+docs/ · src/ · scripts/ · models/ · data/ · results/ · assets/screenshots/ · requirements.txt
+```
 
 ---
 
-## 12 · Visual Assets
+## 11 · Visual Assets
 
 <table>
 <tr>
@@ -342,64 +313,18 @@ Polished architecture diagram for the SDN + ML pipeline.
 
 ---
 
-## 13 · Project Structure
-
-```text
-.
-├── assets/
-│   ├── brand/
-│   │   ├── architecture.svg
-│   │   └── hero.svg
-│   └── screenshots/
-├── Commands.txt
-├── Installation Guide.pdf
-├── README.md
-└── project files
-```
-
-Recommended structure:
-
-```text
-.
-├── data/
-│   ├── raw/
-│   └── processed/
-├── docs/
-│   ├── architecture.md
-│   ├── detection-methodology.md
-│   └── installation.md
-├── models/
-│   └── detector.pkl
-├── results/
-│   ├── metrics.json
-│   └── latency-report.md
-├── scripts/
-│   ├── configure-sflow.sh
-│   ├── start-controller.sh
-│   └── start-mininet.sh
-├── src/
-│   ├── collector.py
-│   ├── detector.py
-│   ├── features.py
-│   └── monitor.py
-└── requirements.txt
-```
-
----
-
-## 14 · Roadmap
+## 12 · Roadmap
 
 - [ ] Add pinned `requirements.txt`.
 - [ ] Move runtime logic into `src/`.
 - [ ] Add setup scripts for controller, topology, and telemetry.
 - [ ] Add screenshots under `assets/screenshots/`.
 - [ ] Add model metrics and detection latency report.
-- [ ] Add architecture and methodology docs.
 - [ ] Add a formal open-source license.
 
 ---
 
-## 15 · Defensive Use Notice
+## 13 · Defensive Use Notice
 
 This project is for authorized security research, controlled lab experimentation, and defensive network engineering education. Keep all traffic generation inside Mininet or networks you own or have explicit permission to test.
 
@@ -411,6 +336,11 @@ This project is for authorized security research, controlled lab experimentation
 
 **AI & Cybersecurity Engineer**
 
-[GitHub](https://github.com/ns7523) · [LinkedIn](https://www.linkedin.com/in/nsakash7523) · [Portfolio](https://nsakash.in) · [Email](mailto:nsakash752003@gmail.com)
+<p>
+  <a href="https://github.com/ns7523"><img src="https://img.shields.io/badge/GitHub-0D1117?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" /></a>
+  <a href="https://nsakash.in"><img src="https://img.shields.io/badge/Portfolio-0D1117?style=for-the-badge&logo=safari&logoColor=white" alt="Portfolio" /></a>
+  <a href="mailto:contact@nsakash.in"><img src="https://img.shields.io/badge/Email-0D1117?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" /></a>
+  <a href="https://www.linkedin.com/in/nsakash7523"><img src="https://img.shields.io/badge/LinkedIn-0D1117?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" /></a>
+</p>
 
 </div>
