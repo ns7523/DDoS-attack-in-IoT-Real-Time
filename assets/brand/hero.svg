@@ -1,0 +1,61 @@
+<svg width="1280" height="420" viewBox="0 0 1280 420" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1280" y2="420" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#050505"/>
+      <stop offset="0.48" stop-color="#0B0F16"/>
+      <stop offset="1" stop-color="#111827"/>
+    </linearGradient>
+    <radialGradient id="glowA" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(1010 84) rotate(133.161) scale(432 286)">
+      <stop stop-color="#A7F3D0" stop-opacity="0.32"/>
+      <stop offset="1" stop-color="#A7F3D0" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glowB" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(168 370) rotate(-35.512) scale(395 252)">
+      <stop stop-color="#60A5FA" stop-opacity="0.20"/>
+      <stop offset="1" stop-color="#60A5FA" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="line" x1="212" y1="232" x2="1020" y2="232" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#64748B" stop-opacity="0"/>
+      <stop offset="0.18" stop-color="#CBD5E1" stop-opacity="0.38"/>
+      <stop offset="0.82" stop-color="#CBD5E1" stop-opacity="0.38"/>
+      <stop offset="1" stop-color="#64748B" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="shadow" x="-20" y="-20" width="1320" height="460" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="18" stdDeviation="30" flood-color="#000000" flood-opacity="0.45"/>
+    </filter>
+  </defs>
+
+  <rect width="1280" height="420" rx="36" fill="url(#bg)"/>
+  <rect width="1280" height="420" rx="36" fill="url(#glowA)"/>
+  <rect width="1280" height="420" rx="36" fill="url(#glowB)"/>
+  <rect x="32" y="32" width="1216" height="356" rx="28" fill="#FFFFFF" fill-opacity="0.035" stroke="#FFFFFF" stroke-opacity="0.10"/>
+
+  <g filter="url(#shadow)">
+    <rect x="100" y="92" width="1080" height="236" rx="28" fill="#0B0F16" fill-opacity="0.72" stroke="#FFFFFF" stroke-opacity="0.12"/>
+  </g>
+
+  <circle cx="137" cy="122" r="7" fill="#F87171" fill-opacity="0.88"/>
+  <circle cx="160" cy="122" r="7" fill="#FBBF24" fill-opacity="0.88"/>
+  <circle cx="183" cy="122" r="7" fill="#34D399" fill-opacity="0.88"/>
+
+  <text x="640" y="150" text-anchor="middle" font-family="Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="18" font-weight="600" fill="#94A3B8" letter-spacing="3">REAL-TIME SDN THREAT INTELLIGENCE</text>
+  <text x="640" y="205" text-anchor="middle" font-family="Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="46" font-weight="750" fill="#F8FAFC">DDoS Detection in IoT</text>
+  <text x="640" y="246" text-anchor="middle" font-family="Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="20" font-weight="450" fill="#CBD5E1">Mininet · Floodlight · sFlow-RT · Machine Learning</text>
+
+  <line x1="214" y1="288" x2="1066" y2="288" stroke="url(#line)"/>
+
+  <g transform="translate(312 304)">
+    <circle cx="0" cy="0" r="5" fill="#E5E7EB"/>
+    <text x="18" y="6" font-family="Inter, ui-sans-serif, system-ui" font-size="14" fill="#94A3B8">Live Flow Telemetry</text>
+  </g>
+  <g transform="translate(533 304)">
+    <circle cx="0" cy="0" r="5" fill="#E5E7EB"/>
+    <text x="18" y="6" font-family="Inter, ui-sans-serif, system-ui" font-size="14" fill="#94A3B8">SDN Control Plane</text>
+  </g>
+  <g transform="translate(751 304)">
+    <circle cx="0" cy="0" r="5" fill="#E5E7EB"/>
+    <text x="18" y="6" font-family="Inter, ui-sans-serif, system-ui" font-size="14" fill="#94A3B8">ML Risk Signal</text>
+  </g>
+
+  <path d="M1044 103C1070 126 1084 159 1081 194C1078 234 1052 269 1015 285" stroke="#A7F3D0" stroke-opacity="0.34" stroke-width="2"/>
+  <path d="M236 317C204 293 186 254 191 214C196 174 224 140 262 126" stroke="#60A5FA" stroke-opacity="0.24" stroke-width="2"/>
+</svg>
