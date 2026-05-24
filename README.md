@@ -1,130 +1,216 @@
 <div align="center">
 
-# DDoS Attack Detection in IoT — Real-Time SDN Analysis
+<br />
 
-**Real-Time Machine Learning Framework for IoT DDoS Detection using Mininet, Floodlight, and sFlow-RT**
+# DDoS Attack Detection in IoT
 
-`IoT Security` · `DDoS Detection` · `SDN` · `sFlow-RT` · `Mininet` · `Machine Learning`
+### Real-Time SDN Threat Detection System
 
-A research-engineered cybersecurity system for observing live network traffic, extracting flow telemetry, and detecting Distributed Denial-of-Service behavior in a controlled IoT-style software-defined networking environment.
+<p>
+  <strong>Mininet</strong> · <strong>Floodlight</strong> · <strong>sFlow-RT</strong> · <strong>Machine Learning</strong> · <strong>IoT Security</strong>
+</p>
+
+<p>
+  A clean research-grade implementation for observing live network telemetry, extracting flow behavior, and detecting DDoS activity inside a controlled software-defined IoT network.
+</p>
+
+<br />
 
 </div>
 
 ---
 
-## Overview
+<div align="center">
 
-**DDoS Attack Detection in IoT — Real-Time SDN Analysis** implements an end-to-end real-time threat detection workflow for IoT network environments. The project combines Mininet-based network emulation, Floodlight SDN control, sFlow-RT telemetry, and machine learning classification to detect abnormal traffic behavior as it occurs.
+| Signal | Runtime | Focus | Environment |
+|---|---|---|---|
+| Real-time traffic intelligence | SDN telemetry pipeline | DDoS detection | Linux / Ubuntu |
 
-The system is designed as a controlled research prototype for studying how real-time traffic sampling and ML-assisted detection can support intelligent network defense.
+</div>
+
+---
+
+## 01 · Overview
+
+**DDoS Attack Detection in IoT** is a real-time cybersecurity research project that combines network emulation, SDN control, traffic telemetry, and machine learning to detect abnormal traffic behavior in an IoT-style environment.
+
+The system is built around a simple but powerful idea: observe live network flow behavior, transform telemetry into detection-ready signals, and classify whether the network is operating normally or showing DDoS-like behavior.
 
 ```text
-Objective   Detect DDoS behavior from live IoT-style network traffic
-Method      SDN telemetry + feature extraction + machine learning prediction
-Runtime     Linux / Ubuntu lab environment
-Interface   Floodlight UI, sFlow-RT metrics, browser-based monitoring
+Purpose     Real-time DDoS detection in an emulated IoT network
+Method      SDN + sFlow telemetry + ML-based classification
+Audience    Security researchers, network engineers, AI security builders
+Status      Research prototype / engineering portfolio system
 ```
 
 ---
 
-## Key Features
+## 02 · Design Principles
 
-| Capability | Description |
-|---|---|
-| Real-Time Detection | Monitors live network behavior and identifies attack-like traffic patterns. |
-| SDN-Based Control | Uses Floodlight as the centralized controller for the emulated topology. |
-| Network Emulation | Uses Mininet to create a controlled IoT-style traffic environment. |
-| Traffic Telemetry | Uses sFlow-RT to sample traffic and expose network metrics. |
-| ML-Assisted Classification | Applies trained machine learning logic to distinguish normal and attack traffic. |
-| Browser Monitoring | Provides access to Floodlight and sFlow-RT dashboards for live analysis. |
+<table>
+<tr>
+<td width="33%" valign="top">
+
+### Minimal Surface
+
+The system keeps the workflow focused: launch the network, collect telemetry, detect abnormal behavior, observe results.
+
+</td>
+<td width="33%" valign="top">
+
+### Research Clarity
+
+Every layer has a clear role: emulation, control, telemetry, feature extraction, detection, and visualization.
+
+</td>
+<td width="33%" valign="top">
+
+### Security-First Scope
+
+Traffic generation is limited to a controlled lab topology and is intended only for defensive research.
+
+</td>
+</tr>
+</table>
 
 ---
 
-## System Architecture
+## 03 · System Architecture
 
 ```mermaid
 flowchart TD
-    A[Mininet Network Topology] --> B[Open vSwitch Bridge]
-    B --> C[sFlow Traffic Sampling]
-    C --> D[sFlow-RT Metric Engine]
-    B --> E[Floodlight SDN Controller]
-    D --> F[Feature Extraction Layer]
-    F --> G[Machine Learning Detection Model]
-    G --> H[Normal / DDoS Classification]
-    H --> I[Monitoring Dashboard]
+    A[Mininet Lab Topology] --> B[Open vSwitch]
+    B --> C[Floodlight SDN Controller]
+    B --> D[sFlow Agent]
+    D --> E[sFlow-RT Metrics Engine]
+    E --> F[Feature Extraction]
+    F --> G[ML Detection Model]
+    G --> H[Classification Layer]
+    H --> I[Normal Traffic]
+    H --> J[DDoS Signal]
+    E --> K[Metric Dashboard]
 ```
 
-### Architecture Layers
+<table>
+<tr>
+<td width="50%" valign="top">
 
-| Layer | Responsibility |
-|---|---|
-| Emulation Layer | Creates hosts, switches, and traffic behavior using Mininet. |
-| Control Layer | Manages SDN behavior through Floodlight. |
-| Telemetry Layer | Samples and exports traffic metrics through sFlow-RT. |
-| Detection Layer | Converts live metrics into model-ready features and predicts traffic state. |
-| Visualization Layer | Presents controller and metric dashboards for analysis. |
+### Control Plane
+
+Floodlight manages the software-defined network and coordinates switch behavior across the emulated topology.
+
+</td>
+<td width="50%" valign="top">
+
+### Data Plane
+
+Mininet and Open vSwitch generate and route traffic between virtual hosts in a controlled environment.
+
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top">
+
+### Telemetry Plane
+
+sFlow samples traffic and streams metrics into sFlow-RT for live observation and analysis.
+
+</td>
+<td width="50%" valign="top">
+
+### Detection Plane
+
+A machine learning layer classifies network behavior based on extracted flow-level features.
+
+</td>
+</tr>
+</table>
 
 ---
 
-## Real-Time Detection Pipeline
+## 04 · Key Features
 
-The runtime workflow begins by launching the controller, creating the emulated topology, enabling sFlow telemetry, and then observing traffic behavior through browser dashboards. Normal traffic and controlled lab attack traffic can then be compared through the monitoring and detection workflow.
+| Feature | Engineering Value |
+|---|---|
+| Real-time traffic monitoring | Observes live flow behavior instead of relying only on static samples. |
+| SDN-based experiment design | Uses Floodlight and Open vSwitch for controlled network behavior. |
+| Mininet network emulation | Creates repeatable host and switch topologies for security testing. |
+| sFlow-RT telemetry | Provides metric-level visibility into flow trends and traffic changes. |
+| ML-driven detection | Converts network behavior into a classification problem. |
+| Dashboard-oriented workflow | Supports visual validation through Floodlight and sFlow-RT interfaces. |
+
+---
+
+## 05 · Real-Time Detection Flow
 
 ```mermaid
 sequenceDiagram
-    participant U as Analyst
-    participant F as Floodlight Controller
-    participant M as Mininet Topology
-    participant S as sFlow-RT
-    participant ML as ML Detector
-    participant D as Dashboard
+    participant Analyst
+    participant Floodlight
+    participant Mininet
+    participant sFlowRT as sFlow-RT
+    participant Detector as ML Detector
+    participant Dashboard
 
-    U->>F: Start SDN controller
-    U->>M: Launch controlled topology
-    M->>F: Register switch and hosts
-    U->>S: Enable sFlow telemetry
-    M->>S: Stream sampled traffic metrics
-    S->>ML: Forward extracted flow features
-    ML->>D: Publish traffic classification
-    D->>U: Display normal or attack behavior
+    Analyst->>Floodlight: Start SDN controller
+    Analyst->>Mininet: Launch topology
+    Mininet->>Floodlight: Register switch and hosts
+    Analyst->>sFlowRT: Enable traffic sampling
+    Mininet->>sFlowRT: Stream flow metrics
+    sFlowRT->>Detector: Provide telemetry features
+    Detector->>Dashboard: Publish classification signal
+    Dashboard->>Analyst: Display network state
 ```
 
 ---
 
-## Detection Methodology
+## 06 · Detection Methodology
 
-The project follows a telemetry-driven DDoS detection methodology:
+The detection pipeline follows a research-oriented security workflow:
 
-1. Build a controlled network topology with Mininet.
-2. Connect Open vSwitch to the Floodlight SDN controller.
-3. Enable sFlow sampling on the virtual switch.
-4. Collect real-time flow metrics through sFlow-RT.
-5. Extract traffic behavior features from the sampled flow data.
-6. Classify traffic using a trained ML detection model.
-7. Observe detection output through browser-based dashboards.
+| Step | Description |
+|---|---|
+| 1 | Create a controlled IoT-style topology in Mininet. |
+| 2 | Connect the topology to a remote Floodlight controller. |
+| 3 | Enable sFlow telemetry on the Open vSwitch bridge. |
+| 4 | Collect traffic metrics through sFlow-RT. |
+| 5 | Transform flow observations into feature values. |
+| 6 | Apply the trained detection model. |
+| 7 | Interpret the output as normal or attack behavior. |
 
 ```mermaid
 flowchart LR
-    A[Traffic Generation] --> B[sFlow Sampling]
-    B --> C[Metric Collection]
-    C --> D[Feature Extraction]
-    D --> E[ML Classification]
-    E --> F[Detection Output]
+    A[Traffic] --> B[Telemetry]
+    B --> C[Features]
+    C --> D[Model]
+    D --> E[Detection]
+    E --> F[Dashboard]
 ```
 
 ---
 
-## Machine Learning Workflow
+## 07 · Machine Learning Workflow
 
-| Stage | Description |
+```mermaid
+flowchart TD
+    A[Normal Traffic Samples] --> C[Training Dataset]
+    B[Controlled DDoS Samples] --> C
+    C --> D[Preprocessing]
+    D --> E[Feature Engineering]
+    E --> F[Model Training]
+    F --> G[Evaluation]
+    G --> H[Runtime Detector]
+```
+
+| Stage | Output |
 |---|---|
-| Data Collection | Capture normal and DDoS-like traffic from the emulated network. |
-| Feature Preparation | Convert observed telemetry into numerical model features. |
-| Model Training | Train supervised detection models on labeled traffic behavior. |
-| Model Evaluation | Validate classification performance using security-relevant metrics. |
-| Runtime Prediction | Load the trained model into the real-time detection workflow. |
+| Traffic collection | Normal and attack traffic observations. |
+| Preprocessing | Cleaned numerical features. |
+| Model training | Supervised classifier for traffic state prediction. |
+| Evaluation | Accuracy, precision, recall, F1-score, false-positive signal. |
+| Runtime inference | Real-time normal / attack classification. |
 
-Recommended evaluation metrics:
+Recommended metrics:
 
 ```text
 Accuracy · Precision · Recall · F1-score · Confusion Matrix · False Positive Rate · Detection Latency
@@ -132,47 +218,55 @@ Accuracy · Precision · Recall · F1-score · Confusion Matrix · False Positiv
 
 ---
 
-## Security Architecture
+## 08 · Tech Stack
 
-This project is intended for controlled lab research only. All traffic generation should remain inside the Mininet environment or another fully authorized test network.
+<table>
+<tr>
+<td width="25%" valign="top">
 
-```mermaid
-flowchart TD
-    A[Authorized Lab Network] --> B[Emulated Hosts]
-    B --> C[Open vSwitch]
-    C --> D[Controller + Telemetry]
-    D --> E[Detection Model]
-    E --> F[Analysis Output]
+**Network Lab**
 
-    X[External Networks] -. blocked / not targeted .-> A
-```
+Mininet  
+Open vSwitch  
+Linux / Ubuntu
 
-### Defensive Scope
+</td>
+<td width="25%" valign="top">
 
-- Designed for learning, research, and defensive detection experimentation.
-- Do not run traffic generation against public or unauthorized systems.
-- Keep all tests inside Mininet or approved isolated lab networks.
-- Use collected metrics to improve detection accuracy, visibility, and response design.
+**SDN Control**
+
+Floodlight  
+Remote Controller  
+OpenFlow
+
+</td>
+<td width="25%" valign="top">
+
+**Telemetry**
+
+sFlow  
+sFlow-RT  
+Metric Browser
+
+</td>
+<td width="25%" valign="top">
+
+**Detection**
+
+Python  
+Scikit-learn  
+Pandas  
+NumPy
+
+</td>
+</tr>
+</table>
 
 ---
 
-## Tech Stack
+## 09 · Installation
 
-| Layer | Technologies |
-|---|---|
-| Language | Python 3.6+ |
-| Network Emulation | Mininet |
-| SDN Controller | Floodlight |
-| Telemetry | sFlow-RT, Open vSwitch sFlow |
-| Machine Learning | Scikit-learn, Pandas, NumPy |
-| Monitoring | Floodlight UI, sFlow-RT Metric Browser |
-| Runtime Environment | Linux / Ubuntu |
-
----
-
-## Installation
-
-> Recommended environment: Ubuntu or a Linux VM with Mininet support.
+> Recommended platform: Ubuntu or a Linux VM with Mininet support.
 
 Clone the repository:
 
@@ -181,7 +275,7 @@ git clone https://github.com/ns7523/DDoS-attack-in-IoT-Real-Time.git
 cd DDoS-attack-in-IoT-Real-Time
 ```
 
-Install Python dependencies:
+Create a Python environment:
 
 ```bash
 python3 -m venv .venv
@@ -189,84 +283,131 @@ source .venv/bin/activate
 pip install pandas numpy scikit-learn
 ```
 
-Install and configure the required networking components:
+Install the required network tooling:
 
 | Dependency | Purpose |
 |---|---|
-| Mininet | Creates the emulated network topology. |
-| Floodlight | Provides SDN controller functionality. |
-| sFlow-RT | Collects and visualizes live traffic telemetry. |
-| hping3 | Optional lab traffic generation tool inside the controlled topology. |
+| Mininet | Emulated topology runtime. |
+| Floodlight | SDN controller. |
+| sFlow-RT | Flow telemetry and metric dashboard. |
+| hping3 | Optional traffic generation inside the authorized lab. |
 
-Additional setup reference: [`Installation Guide.pdf`](Installation%20Guide.pdf)
+Additional reference: [`Installation Guide.pdf`](Installation%20Guide.pdf)
 
 ---
 
-## Usage
+## 10 · Usage
 
-The repository includes a command guide for running the lab workflow: [`Commands.txt`](Commands.txt)
+The operational command sequence is documented in [`Commands.txt`](Commands.txt).
 
-### 1. Start Floodlight
+### Start Floodlight
 
 ```bash
 cd floodlight
 java -jar target/floodlight.jar
 ```
 
-### 2. Start the Mininet topology
+### Launch Mininet
 
 ```bash
 sudo mn --controller=remote,ip=127.0.0.1,port=6653 --topo=single,3
 ```
 
-### 3. Start the detection application
+### Start the detection application
 
 ```bash
 cd ns-ddos
 sudo ./start.sh
 ```
 
-### 4. Enable sFlow monitoring
+### Enable sFlow telemetry
 
 ```bash
 sudo ovs-vsctl -- --id=@sflow create sflow agent=eth0 target=\"127.0.0.1:6343\" sampling=10 polling=20 -- -- set bridge s1 sflow=@sflow
 ```
 
-### 5. Open monitoring interfaces
+### Open dashboards
 
 ```text
-Floodlight UI:  http://localhost:8080/ui/pages/index.html
-sFlow-RT UI:    http://localhost:8008/metric/127.0.0.1/html
+Floodlight UI    http://localhost:8080/ui/pages/index.html
+sFlow-RT UI      http://localhost:8008/metric/127.0.0.1/html
 ```
 
-### 6. Generate authorized lab traffic
-
-Use Mininet host terminals to generate normal traffic and controlled lab-only stress traffic. Keep all testing inside the emulated topology.
+### Open host terminals
 
 ```bash
 xterm h1 h2 h3
 ```
 
+Traffic generation should remain inside the controlled Mininet lab environment.
+
 ---
 
-## Dataset Overview
+## 11 · Dataset Overview
 
-The real-time workflow uses network traffic generated inside the Mininet environment. The dataset is composed of normal traffic samples and controlled DDoS-like traffic samples collected from the software-defined lab network.
+The real-time workflow uses traffic generated inside the Mininet lab. The dataset is composed of normal host traffic, controlled DDoS-style lab traffic, and flow-level telemetry sampled through sFlow.
 
-| Traffic Type | Description |
+| Data Type | Role |
 |---|---|
-| Normal Traffic | Benign host-to-host traffic generated inside the Mininet topology. |
-| Attack Traffic | Controlled high-volume lab traffic used to simulate DDoS behavior. |
-| Flow Metrics | sFlow-derived measurements used for feature extraction and detection. |
-| Labels | Normal or attack classification targets for model training and validation. |
+| Normal traffic | Baseline network behavior. |
+| Controlled DDoS traffic | Attack-like behavior generated inside the authorized lab. |
+| Flow metrics | Telemetry used for feature extraction. |
+| Labels | Normal / attack classification targets. |
 
 ---
 
-## Project Structure
+## 12 · Screenshots
 
-Current repository assets include the README, command workflow, installation guide, and real-time SDN project files.
+Add visual assets under `assets/screenshots/` for a premium repository presentation.
 
-Recommended production-oriented structure:
+<table>
+<tr>
+<td width="50%" valign="top">
+
+### Dashboard
+
+`assets/screenshots/floodlight-dashboard.png`
+
+Controller view showing switch and topology visibility.
+
+</td>
+<td width="50%" valign="top">
+
+### Metrics
+
+`assets/screenshots/sflow-metric-browser.png`
+
+sFlow-RT metric browser showing live flow telemetry.
+
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top">
+
+### Detection
+
+`assets/screenshots/ddos-detection.png`
+
+Real-time detection output during controlled attack simulation.
+
+</td>
+<td width="50%" valign="top">
+
+### Architecture
+
+`assets/screenshots/architecture.png`
+
+System-level architecture diagram for the SDN + ML workflow.
+
+</td>
+</tr>
+</table>
+
+---
+
+## 13 · Project Structure
+
+Recommended structure for a production-grade research repository:
 
 ```text
 .
@@ -300,75 +441,40 @@ Recommended production-oriented structure:
 
 ---
 
-## Screenshots
+## 14 · Engineering Significance
 
-Add screenshots to `assets/screenshots/` to make the repository visually complete.
+This repository demonstrates a complete security-engineering concept rather than a single isolated script:
 
-| Screenshot | Purpose |
-|---|---|
-| `architecture.png` | Shows the SDN + telemetry + ML detection system design. |
-| `floodlight-dashboard.png` | Shows controller connectivity and switch visibility. |
-| `sflow-metric-browser.png` | Shows live traffic metrics from sFlow-RT. |
-| `normal-traffic.png` | Shows baseline traffic behavior. |
-| `ddos-detection.png` | Shows attack detection behavior in the controlled lab. |
-| `flow-trend.png` | Shows traffic trend visualization. |
+- It connects SDN control with real-time telemetry.
+- It translates network behavior into ML-ready signals.
+- It validates detection logic inside a repeatable lab environment.
+- It provides a foundation for intelligent IoT network defense systems.
+- It can evolve into a production-style monitoring and detection pipeline.
 
 ---
 
-## Engineering Significance
+## 15 · Roadmap
 
-This project demonstrates a practical real-time cybersecurity architecture for IoT-style DDoS detection:
-
-- Integrates SDN, telemetry, and ML into one detection workflow.
-- Uses live traffic sampling instead of only static dataset analysis.
-- Provides a controlled environment for repeatable security experiments.
-- Bridges research experimentation with operational network visibility.
-- Establishes a foundation for future intelligent network defense systems.
-
----
-
-## Roadmap
-
-- [ ] Add pinned `requirements.txt` for reproducible Python setup.
-- [ ] Move detection scripts into a clean `src/` module.
-- [ ] Add automated topology startup scripts.
-- [ ] Add structured documentation under `docs/`.
-- [ ] Add model artifacts under `models/` with version notes.
-- [ ] Add latency and throughput evaluation results.
-- [ ] Add screenshots for the full detection workflow.
-- [ ] Add Docker or VM setup notes for repeatable environments.
-- [ ] Add CI checks for documentation and Python formatting.
+- [ ] Add pinned `requirements.txt`.
+- [ ] Move runtime logic into `src/`.
+- [ ] Add automated scripts for controller, topology, and sFlow setup.
+- [ ] Add `docs/architecture.md` and `docs/detection-methodology.md`.
+- [ ] Add model metrics and detection latency reports.
+- [ ] Add curated screenshots under `assets/screenshots/`.
+- [ ] Add Docker or VM-based reproducibility instructions.
 - [ ] Add a formal open-source license.
 
 ---
 
-## Contributing
+## 16 · Defensive Use Notice
 
-Contributions are welcome for improving detection methodology, reproducibility, SDN automation, documentation, and evaluation quality.
-
-Recommended contribution areas:
-
-- Clean startup scripts
-- Improved feature extraction
-- Better metric visualization
-- Model evaluation reports
-- Docker / VM environment setup
-- Security hardening and documentation
+This repository is intended for authorized lab research, network defense education, and controlled security experimentation only. Do not generate traffic against public systems or networks you do not own or have explicit permission to test.
 
 ---
 
-## License
-
-No license file is currently included. Add an open-source license such as MIT, Apache-2.0, or BSD-3-Clause before accepting external contributions.
-
----
-
-## Contact
+## 17 · Contact
 
 **N S Akash**  
 AI & Cybersecurity Engineer
 
-- GitHub: [ns7523](https://github.com/ns7523)
-- LinkedIn: [nsakash7523](https://www.linkedin.com/in/nsakash7523)
-- Portfolio: [nsakash.in](https://nsakash.in)
-- Email: [nsakash752003@gmail.com](mailto:nsakash752003@gmail.com)
+[GitHub](https://github.com/ns7523) · [LinkedIn](https://www.linkedin.com/in/nsakash7523) · [Portfolio](https://nsakash.in) · [Email](mailto:nsakash752003@gmail.com)
