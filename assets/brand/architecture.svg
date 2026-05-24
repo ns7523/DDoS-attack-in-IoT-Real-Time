@@ -1,0 +1,72 @@
+<svg width="1280" height="620" viewBox="0 0 1280 620" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1280" y2="620" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#050505"/>
+      <stop offset="1" stop-color="#111827"/>
+    </linearGradient>
+    <linearGradient id="card" x1="0" y1="0" x2="260" y2="160" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFFFFF" stop-opacity="0.08"/>
+      <stop offset="1" stop-color="#FFFFFF" stop-opacity="0.03"/>
+    </linearGradient>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M2 2L10 6L2 10" stroke="#94A3B8" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+  </defs>
+
+  <rect width="1280" height="620" rx="32" fill="url(#bg)"/>
+  <circle cx="1100" cy="86" r="210" fill="#A7F3D0" fill-opacity="0.10"/>
+  <circle cx="172" cy="522" r="230" fill="#60A5FA" fill-opacity="0.09"/>
+  <rect x="36" y="36" width="1208" height="548" rx="28" fill="#FFFFFF" fill-opacity="0.03" stroke="#FFFFFF" stroke-opacity="0.10"/>
+
+  <text x="86" y="94" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif" font-size="18" font-weight="700" fill="#94A3B8" letter-spacing="3">SYSTEM ARCHITECTURE</text>
+  <text x="86" y="132" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif" font-size="34" font-weight="760" fill="#F8FAFC">SDN Telemetry to ML Decision Flow</text>
+
+  <g transform="translate(86 210)">
+    <rect width="220" height="132" rx="22" fill="url(#card)" stroke="#FFFFFF" stroke-opacity="0.13"/>
+    <circle cx="42" cy="46" r="16" fill="#60A5FA" fill-opacity="0.20" stroke="#93C5FD" stroke-opacity="0.70"/>
+    <text x="72" y="52" font-family="Inter, ui-sans-serif, system-ui" font-size="21" font-weight="700" fill="#F8FAFC">Mininet</text>
+    <text x="32" y="88" font-family="Inter, ui-sans-serif, system-ui" font-size="14" fill="#94A3B8">Controlled virtual hosts</text>
+    <text x="32" y="110" font-family="Inter, ui-sans-serif, system-ui" font-size="14" fill="#94A3B8">and repeatable topology</text>
+  </g>
+
+  <g transform="translate(376 210)">
+    <rect width="220" height="132" rx="22" fill="url(#card)" stroke="#FFFFFF" stroke-opacity="0.13"/>
+    <rect x="29" y="30" width="30" height="30" rx="9" fill="#CBD5E1" fill-opacity="0.14" stroke="#CBD5E1" stroke-opacity="0.55"/>
+    <text x="72" y="52" font-family="Inter, ui-sans-serif, system-ui" font-size="21" font-weight="700" fill="#F8FAFC">Open vSwitch</text>
+    <text x="32" y="88" font-family="Inter, ui-sans-serif, system-ui" font-size="14" fill="#94A3B8">Virtual switching layer</text>
+    <text x="32" y="110" font-family="Inter, ui-sans-serif, system-ui" font-size="14" fill="#94A3B8">with flow visibility</text>
+  </g>
+
+  <g transform="translate(666 210)">
+    <rect width="220" height="132" rx="22" fill="url(#card)" stroke="#FFFFFF" stroke-opacity="0.13"/>
+    <path d="M34 48C42 36 58 36 66 48C58 60 42 60 34 48Z" fill="#A7F3D0" fill-opacity="0.18" stroke="#A7F3D0" stroke-opacity="0.70"/>
+    <text x="72" y="52" font-family="Inter, ui-sans-serif, system-ui" font-size="21" font-weight="700" fill="#F8FAFC">sFlow-RT</text>
+    <text x="32" y="88" font-family="Inter, ui-sans-serif, system-ui" font-size="14" fill="#94A3B8">Telemetry metrics engine</text>
+    <text x="32" y="110" font-family="Inter, ui-sans-serif, system-ui" font-size="14" fill="#94A3B8">for live flow signals</text>
+  </g>
+
+  <g transform="translate(956 210)">
+    <rect width="220" height="132" rx="22" fill="url(#card)" stroke="#FFFFFF" stroke-opacity="0.13"/>
+    <circle cx="45" cy="45" r="14" fill="#F8FAFC" fill-opacity="0.10" stroke="#F8FAFC" stroke-opacity="0.60"/>
+    <path d="M45 31V59M31 45H59" stroke="#F8FAFC" stroke-opacity="0.60" stroke-width="2"/>
+    <text x="72" y="52" font-family="Inter, ui-sans-serif, system-ui" font-size="21" font-weight="700" fill="#F8FAFC">ML Detector</text>
+    <text x="32" y="88" font-family="Inter, ui-sans-serif, system-ui" font-size="14" fill="#94A3B8">Feature inference and</text>
+    <text x="32" y="110" font-family="Inter, ui-sans-serif, system-ui" font-size="14" fill="#94A3B8">traffic state decision</text>
+  </g>
+
+  <line x1="306" y1="276" x2="366" y2="276" stroke="#94A3B8" stroke-opacity="0.65" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="596" y1="276" x2="656" y2="276" stroke="#94A3B8" stroke-opacity="0.65" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="886" y1="276" x2="946" y2="276" stroke="#94A3B8" stroke-opacity="0.65" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <g transform="translate(166 408)">
+    <rect width="948" height="98" rx="24" fill="#FFFFFF" fill-opacity="0.04" stroke="#FFFFFF" stroke-opacity="0.10"/>
+    <text x="40" y="42" font-family="Inter, ui-sans-serif, system-ui" font-size="17" font-weight="700" fill="#E5E7EB">Decision Surface</text>
+    <text x="40" y="68" font-family="Inter, ui-sans-serif, system-ui" font-size="14" fill="#94A3B8">Baseline traffic and anomalous traffic are mapped into a clean state signal for security analysis.</text>
+
+    <rect x="674" y="28" width="92" height="42" rx="21" fill="#22C55E" fill-opacity="0.14" stroke="#86EFAC" stroke-opacity="0.45"/>
+    <text x="720" y="55" text-anchor="middle" font-family="Inter, ui-sans-serif, system-ui" font-size="14" font-weight="700" fill="#BBF7D0">Normal</text>
+
+    <rect x="786" y="28" width="104" height="42" rx="21" fill="#F59E0B" fill-opacity="0.14" stroke="#FCD34D" stroke-opacity="0.45"/>
+    <text x="838" y="55" text-anchor="middle" font-family="Inter, ui-sans-serif, system-ui" font-size="14" font-weight="700" fill="#FDE68A">Risk Signal</text>
+  </g>
+</svg>
