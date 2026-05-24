@@ -9,10 +9,10 @@
 </p>
 
 <p>
-  <img src="https://img.shields.io/badge/Python-0D1117?style=for-the-badge&logo=python&logoColor=white" alt="Python" />
-  <img src="https://img.shields.io/badge/Mininet-0D1117?style=for-the-badge&logo=linux&logoColor=white" alt="Mininet" />
-  <img src="https://img.shields.io/badge/Floodlight-0D1117?style=for-the-badge&logo=icloud&logoColor=white" alt="Floodlight" />
-  <img src="https://img.shields.io/badge/sFlow--RT-0D1117?style=for-the-badge&logo=datadog&logoColor=white" alt="sFlow-RT" />
+  <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python" />
+  <img src="https://img.shields.io/badge/Mininet-1793D1?style=for-the-badge&logo=linux&logoColor=white" alt="Mininet" />
+  <img src="https://img.shields.io/badge/Floodlight-2563EB?style=for-the-badge&logo=icloud&logoColor=white" alt="Floodlight" />
+  <img src="https://img.shields.io/badge/sFlow--RT-00A3E0?style=for-the-badge&logo=datadog&logoColor=white" alt="sFlow-RT" />
 </p>
 
 </div>
@@ -337,10 +337,10 @@ This project is for authorized security research, controlled lab experimentation
 **AI & Cybersecurity Engineer**
 
 <p>
-  <a href="https://github.com/ns7523"><img src="https://img.shields.io/badge/GitHub-0D1117?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" /></a>
-  <a href="https://nsakash.in"><img src="https://img.shields.io/badge/Portfolio-0D1117?style=for-the-badge&logo=safari&logoColor=white" alt="Portfolio" /></a>
-  <a href="mailto:contact@nsakash.in"><img src="https://img.shields.io/badge/Email-0D1117?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" /></a>
-  <a href="https://www.linkedin.com/in/nsakash7523"><img src="https://img.shields.io/badge/LinkedIn-0D1117?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" /></a>
+  <a href="https://github.com/ns7523"><img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" /></a>
+  <a href="https://nsakash.in"><img src="https://img.shields.io/badge/Portfolio-0A84FF?style=for-the-badge&logo=safari&logoColor=white" alt="Portfolio" /></a>
+  <a href="mailto:contact@nsakash.in"><img src="https://img.shields.io/badge/Email-EA4335?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" /></a>
+  <a href="https://www.linkedin.com/in/nsakash7523"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" /></a>
 </p>
 
 </div>
