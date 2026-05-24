@@ -1,114 +1,102 @@
-## Feature Engineering and Machine Learning Framework for DDoS Attack Detection in the Standardized Internet of Things
-NOTE : WORKS ONLY IN LINUX (UBUNTU)
+<div align="center">
+  <br />
+  <img src="https://via.placeholder.com/120x120/0a0a0a/ffffff?text=IoT+Sec" alt="IoT Security Icon" />
+  <br />
 
-[`Installation Guide`](Installation%20Guide.pdf)
+  <h1 align="center">DDoS Detection in IoT (Real-Time)</h1>
 
+  <p align="center">
+    <strong>Feature Engineering & Machine Learning Framework for Real-Time IoT Attack Mitigation.</strong>
+  </p>
 
-## Drive link
-Full Project avalable on [`ns-ddos`](https://drive.google.com/file/d/1ZZW5ZXRkD0Hb7kgpU7pNp3NSgwJSViHw/view?usp=sharing)
+  <p align="center">
+    <img src="https://img.shields.io/badge/Status-Research-blue?style=flat-square" alt="Status">
+    <img src="https://img.shields.io/badge/Network-Mininet_&_Floodlight-orange?style=flat-square" alt="Network">
+    <img src="https://img.shields.io/badge/Python-3.6+-black?style=flat-square&logo=python" alt="Python">
+  </p>
+</div>
 
-## Project Overview
-This project implements a feature engineering and machine learning framework for detecting Distributed Denial of Service (DDoS) attacks in the Internet of Things (IoT) environment. The framework utilizes sFlow, Floodlight, and Mininet for real-time detection.
+<br />
 
-## Table of Contents
-- [Features](#features)
-- [Technologies Used](#technologies-used)
-- [System Design ](#system-design)
-- [File Structure](#file-structure)
-- [Installation](#installation)
-- [Usage](#usage)
-- [Dataset](#dataset)
-- [Real-Time Detection](#real-time-detection)
-- [Results](#results)
+## Overview
 
+This project implements a sophisticated feature engineering and machine learning pipeline for detecting and mitigating Distributed Denial of Service (DDoS) attacks in constrained Internet of Things (IoT) environments. By orchestrating sFlow telemetry, Floodlight SDN control, and Mininet emulation, the framework achieves highly accurate, real-time threat detection.
 
-## Features
-- Real-time DDoS detection using machine learning algorithms.
-- Traffic sampling with sFlow.
-- Network emulation with Mininet.
-- Centralized control with Floodlight SDN controller.
-- Feature extraction from network traffic data.
+### Engineering & Security Significance
+Traditional intrusion detection systems fail under the latency constraints of IoT networks. This architecture extracts specialized telemetry features at the network edge, passing them through an optimized machine learning classifier. The integration with Software-Defined Networking (SDN) allows for immediate, automated mitigation of identified attack vectors.
 
-## Technologies Used
-- `Python 3.6+`
-- `Mininet`
-- `Floodlight SDN Controller`
-- `sFlow-RT`
-- `Scikit-learn`
-- `Pandas`
-- `NumPy`
+<br />
 
-## System Design 
+## System Architecture
+
 <table>
    <tr>
-      <th> System Design </th>
+      <th align="center">Network Design Diagram</th>
    </tr>
    <tr>
-      <td><img width="397" alt="image" src="https://github.com/user-attachments/assets/f167c121-3d77-4cf7-821b-c25aa5a9b871"></td>
+      <td align="center"><img width="600" alt="System Design" src="https://github.com/user-attachments/assets/f167c121-3d77-4cf7-821b-c25aa5a9b871"></td>
    </tr>
 </table>
 
-## File Structure 
+### Detection Pipeline
+1. **Emulation**: `Mininet` simulates a standard IoT topology generating both benign and malicious traffic.
+2. **Telemetry**: `sFlow-RT` samples packet data continuously without degrading network throughput.
+3. **Classification**: `Scikit-learn` models predict attack signatures based on engineered flow features.
+4. **Control**: The `Floodlight` controller isolates and drops malicious flows dynamically.
+
+<br />
+
+## Core Features
+
+- **Real-Time SDN Mitigation**: Automated response pipelines orchestrated via the Floodlight controller.
+- **Optimized Feature Engineering**: Dimensionality reduction on raw network flows to ensure low-latency inference.
+- **IoT-Specific Threat Modeling**: Dataset and attack vectors tailored to standard IoT vulnerability profiles.
+
+<br />
+
+## Tech Stack
+
+| Layer | Technologies |
+| --- | --- |
+| **Network Emulation** | Mininet (Linux/Ubuntu required) |
+| **SDN Controller** | Floodlight |
+| **Telemetry & Flow Analysis** | sFlow-RT |
+| **Machine Learning Core** | Python, Scikit-learn, Pandas, NumPy |
+
+<br />
+
+## Deployment
+
+### Prerequisites
+- **OS**: Linux (Ubuntu highly recommended)
+- **Dependencies**: Python 3.6+, Java (for Floodlight)
+
+### Installation Guide
+Full setup documentation is available in the [`Installation Guide.pdf`](Installation%20Guide.pdf) and the comprehensive [Project Drive Link](https://drive.google.com/file/d/1ZZW5ZXRkD0Hb7kgpU7pNp3NSgwJSViHw/view?usp=sharing).
+
+1. Install `Mininet` via official binaries.
+2. Configure `Floodlight` utilizing the provided installation parameters.
+3. Deploy `sFlow-RT` for network sampling.
+4. Execute deployment commands outlined in [`Commands.txt`](Commands.txt).
+
+<br />
+
+## Performance & Telemetry Dashboards
+
 <table>
    <tr>
-      <th> File Structure </th>
+      <th align="center">Real-Time Dashboard</th>
+      <th align="center">DDoS Protect Mitigation</th>
    </tr>
    <tr>
-      <td><img width="400" alt="image" src="https://github.com/user-attachments/assets/8ddd90d1-7ae1-459b-90d5-447657938383"></td>
+      <td align="center"><img width="400" alt="Dashboard" src="https://github.com/user-attachments/assets/8441ae89-b72a-4f68-8742-1937496cd8f1"></td>
+      <td align="center"><img width="400" alt="Protect" src="https://github.com/user-attachments/assets/32ed02e9-bbea-41d3-aa03-a8405ed63da0"></td>
    </tr>
 </table>
 
-## Installation
+<br />
 
-1. **Download File :**
-   [ns-ddos](https://drive.google.com/file/d/1ZZW5ZXRkD0Hb7kgpU7pNp3NSgwJSViHw/view?usp=sharing)
-   
-2. **Set up Mininet:**
-   Follow the instructions on the [Mininet website](http://mininet.org/download/) to install Mininet.
-
-3. **Set up Floodlight:**
-   Follow the instructions in the Floodlight configuration file (Floodlight Installation Steps) to configure Flood Light.
-
-4. **Set up sFlow-RT:**
-   Follow the instructions on the [sFlow-RT website](https://sflow-rt.com/download.php) to install and configure sFlow-RT.
-
-## Usage
-   Follow the instructions in the [`Command.txt`](Commands.txt)
-
-## Dataset
-The dataset used for training and testing the `machine learning` models consists of network traffic data generated in the `Mininet` environment. The traffic data includes `normal traffic` as well as `DDoS attack traffic`.
-
-## Real-Time Detection
-The [`ns-ddos`](Commands.txt) file utilizes the trained machine learning model to detect DDoS attacks in real-time. It processes the incoming network traffic data and predicts whether it is normal or attack traffic.
-
-## Results
-### Project Snapshots
-<table>
-   <tr>
-      <th>Dashboard</th>
-      <th>DDoS Protect</th>
-   </tr>
-   <tr>
-      <td><img width="397" alt="image" src="https://github.com/user-attachments/assets/8441ae89-b72a-4f68-8742-1937496cd8f1"></td>
-      <td><img width="385" alt="image" src="https://github.com/user-attachments/assets/32ed02e9-bbea-41d3-aa03-a8405ed63da0"></td>
-   </tr>
-   <tr>
-      <th>Metric Browser</th>
-      <th>Data Flow Test</th>
-   </tr>
-   <tr>
-      <td><img width="381" alt="image" src="https://github.com/user-attachments/assets/e36f5b85-cf2f-43a0-aab8-a0b0b76d2943"></td>
-      <td><img width="387" alt="image" src="https://github.com/user-attachments/assets/aa953ea9-e505-4b40-b287-613bab14a5e1"></td>
-   </tr>
-   <tr>
-      <th>Flow Trend</th>
-      <th>DDoS Protect Settings</th>
-   </tr>
-   <tr>
-      <td><img width="387" alt="image" src="https://github.com/user-attachments/assets/1d8b511e-8888-445d-ab39-f8435202b1eb"></td>
-      <td><img width="385" alt="image" src="https://github.com/user-attachments/assets/9c8f8a0c-2209-4940-b191-3b499ee7309d"></td>
-   </tr>
-</table>
-
-
-
+<div align="center">
+  <br />
+  <sub>Security Architecture by <a href="https://github.com/ns7523">N S AKASH</a></sub>
+</div>
